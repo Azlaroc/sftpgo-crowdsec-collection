@@ -1,5 +1,5 @@
 type: leaky
-name: crowdsecurity/sftpgo-bf
+name: Azlaroc/sftpgo-bf
 description: "Detect SFTPGo bruteforce attacks on FTP/SSH"
 filter: "evt.Meta.log_type == 'sftpgo_auth' && evt.Meta.is_failed_login == 'true'"
 groupby: evt.Meta.source_ip
