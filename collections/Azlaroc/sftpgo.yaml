@@ -2,6 +2,6 @@ name: crowdsecurity/sftpgo
 description: "Collection for detecting bruteforce attacks on SFTPGo (FTP and SFTP protocols)"
 author: "Azlaroc"
 parsers:
-  - crowdsecurity/sftpgo-logs
+  - Azlaroc/sftpgo-logs
 scenarios:
-  - crowdsecurity/sftpgo-bf
+  - Azlaroc/sftpgo-bf

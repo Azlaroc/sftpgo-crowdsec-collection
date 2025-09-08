@@ -3,13 +3,19 @@
 This collection provides a parser and scenario for detecting bruteforce attacks on SFTPGo, supporting both FTP (port 2121) and SFTP (port 2022) protocols.
 
 ## Components
-1. **Parser**: `crowdsecurity/sftpgo-logs` - Parses SFTPGo JSON logs for failed and successful login attempts.
-2. **Scenario**: `crowdsecurity/sftpgo-bf` - Triggers a 4-hour ban after 5 failed logins within 2 minutes.
+1. **Parser**: `Azlaroc/sftpgo-logs` - Parses SFTPGo JSON logs for failed and successful login attempts.
+2. **Scenario**: `Azlaroc/sftpgo-bf` - Triggers a 4-hour ban after 5 failed logins within 2 minutes.
 
 ## Installation
+Until merged into the CrowdSec Hub (see PR: https://github.com/crowdsecurity/hub/pull/1461), install manually:
 ```bash
-sudo cscli collections install crowdsecurity/sftpgo
+sudo cscli collections install https://raw.githubusercontent.com/Azlaroc/sftpgo-crowdsec-collection/main/collections/Azlaroc/sftpgo.yaml
 ```
+Once merged, use:
+```bash
+sudo cscli collections install Azlaroc/sftpgo
+```
+
 
 ## Requirements
 1. SFTPGo with verbose logging enabled (JSON format).
