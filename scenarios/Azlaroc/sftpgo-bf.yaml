@@ -3,8 +3,8 @@ name: Azlaroc/sftpgo-bf
 description: "Detect SFTPGo bruteforce attacks on FTP/SSH"
 filter: "evt.Meta.log_type == 'sftpgo_auth' && evt.Meta.is_failed_login == 'true'"
 groupby: evt.Meta.source_ip
-capacity: 5
-leakspeed: "2m"
+capacity: 3
+leakspeed: "30s"
 blackhole: 4h
 labels:
   service: sftpgo
