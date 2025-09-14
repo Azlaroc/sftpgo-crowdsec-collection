@@ -8,7 +8,7 @@ This collection provides a parser and scenario for detecting bruteforce attacks 
 
 ## Manual Installation for SFTPGo CrowdSec Collection
 
-This guide provides the steps to manually install the SFTPGo CrowdSec collection from the GitHub repository (https://github.com/Azlaroc/sftpgo-crowdsec-collection) for CrowdSec versions (e.g., v1.6.11) where `cscli collections install` does not support direct URL or local file installation. It also includes instructions for configuring SFTPGo to produce logs compatible with the collection's parser. The process involves downloading the collection, parser, and scenario files, placing them in the correct directories, enabling the components, and setting up the SFTPGo log source.
+This guide provides the steps to manually install the SFTPGo CrowdSec collection from the GitHub repository (https://github.com/Azlaroc/sftpgo-crowdsec-collection) for CrowdSec versions (e.g., v1.6.11 and above) where `cscli collections install` does not support direct URL or local file installation. It also includes instructions for configuring SFTPGo to produce logs compatible with the collection's parser. The process involves downloading the collection, parser, and scenario files, placing them in the correct directories, enabling the components, and setting up the SFTPGo log source.
 
 ## Prerequisites
 
