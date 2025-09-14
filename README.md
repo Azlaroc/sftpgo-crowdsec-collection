@@ -234,7 +234,7 @@ To ensure SFTPGo produces logs that the `Azlaroc/sftpgo-logs` parser can process
 3. CrowdSec v1.6.11 or later.
 
 ## Testing
-1. Simulate 6 failed logins using an FTP/SFTP client.
+1. Simulate 4 failed logins using an FTP/SFTP client.
 2. Check bans with `sudo cscli decisions list`.
 3. Verified with 4 bans triggered in production.
 
