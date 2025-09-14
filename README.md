@@ -97,7 +97,6 @@ To ensure SFTPGo produces logs that the `Azlaroc/sftpgo-logs` parser can process
    sudo wget https://raw.githubusercontent.com/Azlaroc/sftpgo-crowdsec-collection/main/collections/Azlaroc/sftpgo.yaml -O /etc/crowdsec/collections/Azlaroc/sftpgo.yaml
    sudo wget https://raw.githubusercontent.com/Azlaroc/sftpgo-crowdsec-collection/main/parsers/s01-parse/Azlaroc/sftpgo-logs.yaml -O /etc/crowdsec/parsers/s01-parse/Azlaroc/sftpgo-logs.yaml
    sudo wget https://raw.githubusercontent.com/Azlaroc/sftpgo-crowdsec-collection/main/scenarios/Azlaroc/sftpgo-bf.yaml -O /etc/crowdsec/scenarios/Azlaroc/sftpgo-bf.yaml
-   sudo wget https://raw.githubusercontent.com/Azlaroc/sftpgo-crowdsec-collection/main/scenarios/Azlaroc/sftpgo-slow-bf.yaml -O /etc/crowdsec/scenarios/Azlaroc/sftpgo-slow-bf.yaml
    ```
 
    Alternatively, clone the repository and copy files:
@@ -107,7 +106,6 @@ To ensure SFTPGo produces logs that the `Azlaroc/sftpgo-logs` parser can process
    sudo cp sftpgo-crowdsec-collection/collections/Azlaroc/sftpgo.yaml /etc/crowdsec/collections/Azlaroc/
    sudo cp sftpgo-crowdsec-collection/parsers/s01-parse/Azlaroc/sftpgo-logs.yaml /etc/crowdsec/parsers/s01-parse/Azlaroc/
    sudo cp sftpgo-crowdsec-collection/scenarios/Azlaroc/sftpgo-bf.yaml /etc/crowdsec/scenarios/Azlaroc/
-   sudo cp sftpgo-crowdsec-collection/scenarios/Azlaroc/sftpgo-slow-bf.yaml /etc/crowdsec/scenarios/Azlaroc/
    ```
 
 3. **Set Permissions and Ownership**  
@@ -117,11 +115,9 @@ To ensure SFTPGo produces logs that the `Azlaroc/sftpgo-logs` parser can process
    sudo chmod 644 /etc/crowdsec/collections/Azlaroc/sftpgo.yaml
    sudo chmod 644 /etc/crowdsec/parsers/s01-parse/Azlaroc/sftpgo-logs.yaml
    sudo chmod 644 /etc/crowdsec/scenarios/Azlaroc/sftpgo-bf.yaml
-   sudo chmod 644 /etc/crowdsec/scenarios/Azlaroc/sftpgo-slow-bf.yaml
    sudo chown crowdsec:crowdsec /etc/crowdsec/collections/Azlaroc/sftpgo.yaml
    sudo chown crowdsec:crowdsec /etc/crowdsec/parsers/s01-parse/Azlaroc/sftpgo-logs.yaml
    sudo chown crowdsec:crowdsec /etc/crowdsec/scenarios/Azlaroc/sftpgo-bf.yaml
-   sudo chown crowdsec:crowdsec /etc/crowdsec/scenarios/Azlaroc/sftpgo-slow-bf.yaml
    ```
 
 4. **Enable Parsers and Scenarios**  
@@ -130,7 +126,6 @@ To ensure SFTPGo produces logs that the `Azlaroc/sftpgo-logs` parser can process
    ```
    sudo cscli parsers install /etc/crowdsec/parsers/s01-parse/Azlaroc/sftpgo-logs.yaml
    sudo cscli scenarios install /etc/crowdsec/scenarios/Azlaroc/sftpgo-bf.yaml
-   sudo cscli scenarios install /etc/crowdsec/scenarios/Azlaroc/sftpgo-slow-bf.yaml
    ```
 
    Note: The `sftpgo.yaml` collection file is a manifest and does not require separate installation. Enabling the parser and scenarios activates the collection.
@@ -169,7 +164,7 @@ To ensure SFTPGo produces logs that the `Azlaroc/sftpgo-logs` parser can process
    sudo cscli collections list
    ```
 
-   Look for `Azlaroc/sftpgo-logs` (parser), `Azlaroc/sftpgo-bf`, and `Azlaroc/sftpgo-slow-bf` (scenarios). The collection `Azlaroc/sftpgo` may appear as “local” or “tainted” since it’s not from the official hub.
+   Look for `Azlaroc/sftpgo-logs` (parser), `Azlaroc/sftpgo-bf` (scenarios). The collection `Azlaroc/sftpgo` may appear as “local” or “tainted” since it’s not from the official hub.
 
 8. **Check Metrics**  
    Verify that SFTPGo logs are being parsed and scenarios are active:
