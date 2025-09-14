@@ -4,7 +4,7 @@ This collection provides a parser and scenario for detecting bruteforce attacks 
 
 ## Components
 1. **Parser**: `Azlaroc/sftpgo-logs` - Parses SFTPGo JSON logs for failed and successful login attempts.
-2. **Scenario**: `Azlaroc/sftpgo-bf` - Triggers a 4-hour ban after 5 failed logins within 2 minutes.
+2. **Scenario**: `Azlaroc/sftpgo-bf` - Triggers a 4-hour ban after 3 failed logins within 3 seconds.
 
 ## Manual Installation for SFTPGo CrowdSec Collection
 
